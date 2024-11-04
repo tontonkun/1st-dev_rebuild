@@ -1,0 +1,87 @@
+/* login.css */
+
+/* 他のスタイルも適宜調整 */
+.header {
+    font-size: 30px;
+    align-items: center;
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerTitle {
+    margin-left: 20px;
+}
+
+.headerLinks {
+    text-decoration: none;
+    font-size: 15px;
+    display: flex;
+}
+
+.header-nav__button {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font: inherit;
+    padding: 5px;
+    width: 120px;
+}
+
+.main {
+    background-color: #f1f1f1;
+    text-align: center;
+    height: 450px;
+    margin: auto;
+}
+
+.form {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.titleArea {
+    margin: auto;
+    height: 50px;
+    padding: 15px;
+}
+
+.title {
+    font-size: 20px;
+    /* 必要に応じてフォントサイズを調整 */
+    font-weight: bold;
+    /* タイトルを太字にする */
+    text-align: center;
+    /* タイトルを中央揃えにする */
+    align-items: center;
+}
+
+.buttonArea {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 80%;
+    height: 150px;
+}
+
+.form {
+    width: 40%;
+    height: 100%;
+}
+
+.buttonArea button {
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

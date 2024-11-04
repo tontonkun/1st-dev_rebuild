@@ -1,45 +1,46 @@
 .header {
-    background: #000;
-}
-
-.header__inner {
-    margin: 0 auto;
-    padding: 20px 15px;
-    max-width: 1230px;
-}
-
-.header-utilities {
-    display: flex;
+    font-size: 30px;
     align-items: center;
-    justify-content: space-between;
-}
-
-.header__logo {
-    color: #fff;
-    text-decoration: none;
     font-weight: bold;
-    font-size: 24px;
-}
-
-.header-utilities nav {
-    width: 18%;
-}
-
-.header-nav {
+    padding: 10px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
-.header-nav__link {
-    color: #fff;
-    text-decoration: none;
+.headerTitle {
+    margin-left: 20px;
 }
 
-.header-nav__button {
+.headerLinks {
+    text-decoration: none;
+    font-size: 15px;
+    display: flex;
+}
+
+.headerLinks button {
+    background: none;
     border: none;
-    background: transparent;
-    color: #fff;
-    font-size: 16px;
+    color: black;
     cursor: pointer;
+    font: inherit;
+    padding: 5px;
+    width: 120px;
+}
+
+.main {
+    background-color: #f1f1f1;
+    text-align: center;
+    height: 500px;
+    justify-content: center;
+    /* 横方向に中央寄せ */
+    margin: 0;
+    /* デフォルトのマージンをリセット */
+}
+
+.content {
+    justify-content: center;
+    align-items: center;
+    /* 子要素を中央寄せ */
+    margin: 0;
+    /* デフォルトのマージンをリセット */
 }

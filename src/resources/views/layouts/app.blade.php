@@ -12,32 +12,37 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__inner">
-            <div class="header-utilities">
-                <a class="header__logo" href="/">
-                    Attendance Management
-                </a>
-                <nav>
-                    <ul class="header-nav">
-                        <li class="header-nav__item">
-                            <a class="header-nav__link" href="/mypage">マイページ</a>
-                        </li>
-                        <li class="header-nav__item">
-                            <form class="form" action="/logout" method="post">
-                                @csrf
-                                <button class="header-nav__button">ログアウト</button>
-                            </form>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+    <div class="header">
+        <div class="headerTitle">
+            Atte
         </div>
-    </header>
+        <div class="headerLinks">
+            <form class="form" action="/" method="GET">
+                @csrf
+                <button class="header-nav__button">ホーム</button>
+            </form>
+            <form class="form" action="/time_record" method="GET">
+                @csrf
+                <button class="header-nav__button">日付一覧</button>
+            </form>
+            <form class="form" action="/user_list" method="GET">
+                @csrf
+                <button class="header-nav__button">ユーザー一覧</button>
+            </form>
+            <form class="form" action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button class="header-nav__button">ログアウト</button>
+            </form>
 
-    <main>
-        @yield('content')
-    </main>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="content">
+            @yield('content')
+        </div>
+    </div>
+
 </body>
 
 </html>

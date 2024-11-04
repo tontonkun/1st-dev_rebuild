@@ -1,77 +1,73 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="ja">
 
-@section('css')
-<link rel="stylesheet" href="{{ asset('css/register.css') }}">
-@endsection
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会員登録</title>
+    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
+</head>
 
-@section('content')
-<div class="register__content">
-    <div class="register-form__heading">
-        <h2>会員登録</h2>
+<body>
+    <div class="header">
+        <div class="headerTitle">
+            Atte
+        </div>
     </div>
-    <form class="form" action="/register" method="post">
-        @csrf
-        <div class="form__group">
-            <div class="form__group-title">
-                <span class="form__label--item">お名前</span>
-            </div>
-            <div class="form__group-content">
-                <div class="form__input--text">
-                    <input type="text" name="name" value="{{ old('name') }}" />
+
+    <div class="main">
+        <div class="content">
+            <form class="form" action="register" method="POST">
+                @csrf
+                <div class="titleArea">
+                    <div class="title">
+                        会員登録
+                    </div>
                 </div>
-                <div class="form__error">
+
+                <div class="inputArea">
+                    <input class="name" type="text" name="name" placeholder="名前" value="{{ old('name') }}">
                     @error('name')
-                        {{ $message }}
+                        <div class="error">{{ $message }}</div>
                     @enderror
                 </div>
-            </div>
-        </div>
-        <div class="form__group">
-            <div class="form__group-title">
-                <span class="form__label--item">メールアドレス</span>
-            </div>
-            <div class="form__group-content">
-                <div class="form__input--text">
-                    <input type="email" name="email" value="{{ old('email') }}" />
-                </div>
-                <div class="form__error">
+
+                <div class="inputArea">
+                    <input class="mail" type="email" name="email" placeholder="メールアドレス" value="{{ old('email') }}">
                     @error('email')
-                        {{ $message }}
+                        <div class="error">{{ $message }}</div>
                     @enderror
                 </div>
-            </div>
-        </div>
-        <div class="form__group">
-            <div class="form__group-title">
-                <span class="form__label--item">パスワード</span>
-            </div>
-            <div class="form__group-content">
-                <div class="form__input--text">
-                    <input type="password" name="password" />
-                </div>
-                <div class="form__error">
+
+                <div class="inputArea">
+                    <input class="password" type="password" name="password" placeholder="パスワード">
                     @error('password')
-                        {{ $message }}
+                        <div class="error">{{ $message }}</div>
                     @enderror
                 </div>
-            </div>
-        </div>
-        <div class="form__group">
-            <div class="form__group-title">
-                <span class="form__label--item">確認用パスワード</span>
-            </div>
-            <div class="form__group-content">
-                <div class="form__input--text">
-                    <input type="password" name="password_confirmation" />
+
+                <div class="inputArea">
+                    <input class="password" type="password" name="password_confirmation" placeholder="確認用パスワード">
                 </div>
-            </div>
+
+                <div class="buttonArea">
+                    <button class="registerButton" type="submit">会員登録</button>
+                </div>
+
+                <div class="annonceForMenbers">
+                    <div>
+                        アカウントをお持ちの方はこちらから
+                    </div>
+
+                    <a href="login" class="loginLink">
+                        ログイン
+                    </a>
+                </div>
+            </form>
         </div>
-        <div class="form__button">
-            <button class="form__button-submit" type="submit">登録</button>
-        </div>
-    </form>
-    <div class="login__link">
-        <a class="login__button-submit" href="/login">ログインの方はこちら</a>
     </div>
-</div>
-@endsection
+</body>
+
+</html>
