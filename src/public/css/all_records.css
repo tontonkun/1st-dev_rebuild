@@ -1,0 +1,43 @@
+
+.allRecords {
+    font-size: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.allRecords th,
+td {
+    width: 200px;
+    border: none;
+    /* 縦の枠線を消す */
+    padding: 5px;
+    /* セルの内側の余白 */
+    text-align: center;
+    /* セル内のテキストを中央揃え */
+}
+
+.allRecords tr {
+    border-bottom: 1px solid #ccc;
+    /* 行の下にだけ枠線を設定 */
+    width: 90%;
+}
+
+.allRecords tr:last-child {
+    border-bottom: none;
+    /* 最後の行の下の枠線を消す */
+}
+
+.pagination {
+    width: 100%;
+}
+
+svg.w-5.h-5 {
+    /*paginateメソッドの矢印の大きさ調整のために追加*/
+    width: 30px;
+    height: 30px;
+}
+
+.flex.justify-between.flex-1.sm\:hidden {
+    display: none;
+}
